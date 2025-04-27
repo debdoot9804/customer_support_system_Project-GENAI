@@ -43,11 +43,12 @@ class ingest_data:
             inserted_ids=vector_store.add_documents(docs)
             print(inserted_ids)
         else:
+            
             return vector_store
 
         return vector_store,inserted_ids
-        
-            
+
+
             
 
 
