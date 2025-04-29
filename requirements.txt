@@ -5,4 +5,8 @@ pandas
 python-dotenv
 langchain_astradb
 langchain_google_genai
+fastapi
+uvicorn
+jinja2
+python-multipart
 -e.
