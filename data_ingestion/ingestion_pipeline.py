@@ -104,12 +104,12 @@ class DataIngestion:
         documents=self.transform_data()
         vector_store,inserted_ids=self.store_in_vector_db(documents)
 
-        query="Suggest me low budget headphones"
-        results=vector_store.similarity_search(query)
+        # query="Suggest me low budget headphones"
+        # results=vector_store.similarity_search(query)
 
-        print(f"\n Search results for query : {query}")
-        for i in results:
-            print(f"Metadata:{i.metadata} \nContent:{i.page_content}\n")
+        # print(f"\n Search results for query : {query}")
+        # for i in results:
+        #     print(f"Metadata:{i.metadata} \nContent:{i.page_content}\n")
 
 if __name__ == "__main__":
     ingestion = DataIngestion()
