@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 from typing import List, Tuple
 from langchain_core.documents import Document
 from langchain_astradb import AstraDBVectorStore
-from utils.model_loader import ModelLoader
 from config.config_loader import load_config
+from utils.models_loader import ModelLoader
 
 class DataIngestion:
     """
@@ -18,12 +18,12 @@ class DataIngestion:
         """
         print("Initializing DataIngestion pipeline...")
         self.model_loader=ModelLoader()
-        self._load_env_variables()
-        self.csv_path = self._get_csv_path()
-        self.product_data = self._load_csv()
+        self.load_env_variables()
+        self.csv_path = self.get_csv_path()
+        self.product_data = self.load_csv()
         self.config=load_config()
 
-    def _load_env_variables(self):
+    def load_env_variables(self):
         """
         Load and validate required environment variables.
         """
@@ -42,7 +42,7 @@ class DataIngestion:
 
        
 
-    def _get_csv_path(self):
+    def get_csv_path(self):
         """
         Get path to the CSV file located inside 'data' folder.
         """
@@ -54,7 +54,7 @@ class DataIngestion:
 
         return csv_path
 
-    def _load_csv(self):
+    def load_csv(self):
         """
         Load product data from CSV.
         """
