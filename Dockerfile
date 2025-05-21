@@ -1,9 +1,10 @@
 FROM python:3.10-slim
 
-WORKDIR /app  #working directory
+WORKDIR /app
 
-COPY . .   # Copy from current directory to app
+COPY . .
 
+# 👇 Debug: check all files inside the image
 RUN ls -R /app
 
 RUN pip install --no-cache-dir -r requirements.txt
