@@ -33,6 +33,7 @@ jobs :
 
     - name: Build, tag, and push image to Amazon ECR
       env:
+      
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: customer_support_system
         IMAGE_TAG: latest
