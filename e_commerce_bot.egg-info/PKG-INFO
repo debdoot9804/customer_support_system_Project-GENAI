@@ -1,6 +1,0 @@
-Metadata-Version: 2.1
-Name: e-commerce-bot
-Version: 1.0.0
-Author: Debdoot
-Requires-Dist: langchain-astradb
-Requires-Dist: langchain
